@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "cd ./apps/landing && next dev",
+    "start": "cd ./app && yarn vite",
     "storybook": "cd ./ui && npm run storybook"
   }
 }
