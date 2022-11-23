@@ -1,25 +1,27 @@
-import { useState } from 'react'
-export default function Slider(props) {
-  const [range, setValue] = useState({
-    value: props.value,
-  })
+export interface IProps {
+  min: number
+  max: number
+  id: string
+  step: string
+  range: string
+  onChange: (value: string) => void
+}
 
-  const handleChange = (e) => {
-    setValue({ value: e.target.value })
-  }
-
+const Slider = (props: IProps) => {
   return (
     <div className="">
       <input
         type="range"
         min={props.min}
         max={props.max}
-        value={range.value}
+        value={props.range}
         className=""
         id={props.id}
         step={props.step}
-        onChange={handleChange}
+        onChange={(e) => props.onChange((e.target as HTMLInputElement).value)}
       />
     </div>
   )
 }
+
+export default Slider

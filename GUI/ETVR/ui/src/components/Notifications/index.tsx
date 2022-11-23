@@ -1,3 +1,5 @@
-export function Notifications() {
-  return <></>
+const Notifications = () => {
+  return <>Notifications</>
 }
+
+export default Notifications

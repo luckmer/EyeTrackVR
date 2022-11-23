@@ -1,4 +1,4 @@
-import logo from '@static/index'
+// import logo from '@utils/static/icons/index'
 import { faCamera, faGear } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
@@ -13,16 +13,15 @@ export interface Iprops {
 }
 
 const Header = (props: Iprops) => {
-  console.log(logo)
   return (
     <header>
       <div className="flex flex-grow justify-around items-center mt-[1rem]">
         <Link to={'/'} className="flex-none">
-          <img
+          {/* <img
             src={logo.logo}
             alt="eytrackvrlogo"
             className="bg-gray-800 hover:bg-gray-900 rounded-full focus:bg-gray-900 transition duration-200 ease-in focus:shadow-inner w-[90px] mr-[42.13px] shadow-lg"
-          />
+          /> */}
         </Link>
         <div className="flex h-[55%] content-center items-center mt-[5px]">
           <div className="flex flex-grow justify-center border-none shadow-lg content-center leading-5 font-sans font-medium text-[.75rem] rounded-[15px] h-[100%] w-[100%] bg-[#0e0e0e] text-[#5f5f5f]">

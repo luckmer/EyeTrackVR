@@ -1,11 +1,13 @@
-import { GeneralSettings, AlgoSettings } from '@components/Settings/States'
-import Slider from '@components/Slider'
+import Slider from '@components/Slider/index'
 import Tooltip from '@components/Tooltip'
 import { Menu, Switch } from '@headlessui/react'
+import { GeneralSettings, AlgoSettings } from '@utils/static/defaultData/index'
 import { useState } from 'react'
 
 export function SettingsPage() {
   const [enabled, setEnabled] = useState(false)
+  const [range, setRange] = useState('')
+
   return (
     <div className="py-4 px-8">
       <Menu as="div" className="h-[55%] content-center">
@@ -63,9 +65,9 @@ export function SettingsPage() {
                               id={item.id}
                               min={item.min}
                               max={item.max}
-                              value={item.value}
-                              step={item.step}
-                              className=""
+                              range={String(item.value)}
+                              step={String(item.step)}
+                              onChange={(value) => setRange(value)}
                             />
                           </div>
                           <span> {item.name} </span>
